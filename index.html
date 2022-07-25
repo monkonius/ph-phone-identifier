@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
     <title>Philippine Phone Identifier</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Philippine Phone Identifier</h1>
-    <form>
-        <input id="number" type="text" autofocus autocomplete="off">
-        <input id="submit" type="submit" value="Submit">
-    </form>
-    <p id="result"></p>
+    <div class="d-flex justify-content-center">
+        <div class="flex-column text-center">
+            <h1>Philippine Phone Identifier</h1>
+            <form>
+                <input class="form-control" id="number" type="text" autofocus autocomplete="off" placeholder="Number">
+                <input class="btn btn-primary" id="submit" type="submit" value="Submit">
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
 </body>
 </html>

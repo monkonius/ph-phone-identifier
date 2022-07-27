@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+}
+
+input {
+    margin: 8px 0;
+}
+
+p {
+    height: 24px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    transform: translateY(-50%);
+}

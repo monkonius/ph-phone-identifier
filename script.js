@@ -52,14 +52,14 @@ document.querySelector('form').onsubmit = () => {
     let number = numberField.value;
     let result;
 
-    const country = /^\+63/
+    const country = /^\+63/;
     number = number.replace(country, '0');
 
-    const separator = /\s|-|\./g
+    const separator = /\s|-|\.|\(|\)/g;
     number = number.replace(separator, '');
 
     if (!number || !Number(number)) {
-        result = 'Please enter a number'
+        result = 'Please enter a number';
     } else if (number.length !== 11) {
         result = 'Invalid number';
     } else {

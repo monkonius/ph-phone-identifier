@@ -58,7 +58,9 @@ document.querySelector('form').onsubmit = () => {
     const separator = /\s|-|\./g
     number = number.replace(separator, '');
 
-    if (number.length !== 11) {
+    if (!number || !Number(number)) {
+        result = 'Please enter a number'
+    } else if (number.length !== 11) {
         result = 'Invalid number';
     } else {
         let prefix = number.substring(0, 4);

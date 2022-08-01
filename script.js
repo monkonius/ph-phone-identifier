@@ -45,8 +45,8 @@ function findProvider(prefix) {
     return 'Invalid number';
 }
 
-const submit = document.querySelector('#submit');
-const numberField = document.querySelector('#number');
+const submit = document.getElementById('submit');
+const numberField = document.getElementById('number');
 
 document.querySelector('form').onsubmit = () => {
     let number = numberField.value;
@@ -68,7 +68,7 @@ document.querySelector('form').onsubmit = () => {
         result = findProvider(prefix);
     }
 
-    document.querySelector('#result').innerHTML = result;
+    document.getElementById('result').innerHTML = result;
 
     return false;
 }

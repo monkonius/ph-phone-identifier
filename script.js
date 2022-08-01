@@ -30,15 +30,15 @@ const TNT = [
 
 function findProvider(prefix) {
     if (prefix.length === 4) {
-        if (DITO.indexOf(prefix) >= 0) return 'Provider: DITO';
-        if (GLOBE.indexOf(prefix) >= 0) return 'Provider: GLOBE';
-        if (SMART.indexOf(prefix) >= 0) return 'Provider: SMART';
-        if (SUN.indexOf(prefix) >= 0) return 'Provider: SUN';
-        if (TNT.indexOf(prefix) >= 0) return 'Provider: TNT';
+        if (DITO.includes(prefix)) return 'Provider: DITO';
+        if (GLOBE.includes(prefix)) return 'Provider: GLOBE';
+        if (SMART.includes(prefix)) return 'Provider: SMART';
+        if (SUN.includes(prefix)) return 'Provider: SUN';
+        if (TNT.includes(prefix)) return 'Provider: TNT';
     }
 
     if (prefix.length === 5) {
-        return (GLOBE_EXTRA.indexOf(prefix) >= 0)
+        return (GLOBE_EXTRA.includes(prefix))
             ? 'Provider: GLOBE' : 'Provider: SUN';
     }
     

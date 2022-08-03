@@ -45,7 +45,7 @@ function findProvider(prefix) {
     return 'Invalid number';
 }
 
-const submit = document.getElementById('submit');
+const resultDisplay = document.getElementById('result');
 const numberField = document.getElementById('number');
 
 document.querySelector('form').onsubmit = () => {
@@ -53,22 +53,23 @@ document.querySelector('form').onsubmit = () => {
     let result;
 
     const country = /^\+63/;
-    number = number.replace(country, '0');
+    let check = number.replace(country, '0');
 
     const separator = /\s|-|\.|\(|\)/g;
-    number = number.replace(separator, '');
+    check = check.replace(separator, '');
 
-    if (!number || !Number(number)) {
+    if (!check || !Number(check)) {
         result = 'Please enter a number';
-    } else if (number.length !== 11) {
+    } else if (check.length !== 11) {
         result = 'Invalid number';
     } else {
-        let prefix = number.substring(0, 4);
-        if (prefix === '0925') prefix = number.substring(0, 5);
+        let prefix = check.substring(0, 4);
+        if (prefix === '0925') prefix = check.substring(0, 5);
         result = findProvider(prefix);
     }
 
-    document.getElementById('result').innerHTML = result;
+    resultDisplay.innerHTML = `${number} → ${result}`;
+    numberField.value = '';
 
     return false;
 }

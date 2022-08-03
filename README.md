@@ -1,5 +1,5 @@
 # Philippine Phone Identifier
-Philippine Phone Identifier is a simple web program that determines if a user inputted number is a valid Philippine number and its respective service provider.
+Philippine Phone Identifier is a simple web page that determines if a user inputted number is a valid Philippine number and returns its respective service provider.
 
 You may visit the page [here](https://monkonius.github.io/ph-phone-identifier/).
 

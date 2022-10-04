@@ -42,6 +42,11 @@ footer {
     transform: translateY(-50%);
 }
 
-#result {
+.result {
     height: 24px;
+    margin-bottom: 4px;
+}
+
+#provider {
+    display: block;
 }

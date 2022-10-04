@@ -45,12 +45,13 @@ function findProvider(prefix) {
     return 'Invalid number';
 }
 
-const resultDisplay = document.getElementById('result');
+const inputDisplay = document.getElementById('input');
+const providerDisplay = document.getElementById('provider');
 const numberField = document.getElementById('number');
 
 document.querySelector('form').onsubmit = () => {
     let number = numberField.value;
-    let result;
+    let provider;
 
     const country = /^\+63/;
     let check = number.replace(country, '0');
@@ -59,16 +60,17 @@ document.querySelector('form').onsubmit = () => {
     check = check.replace(separator, '');
 
     if (!check || !Number(check)) {
-        result = 'Please enter a number';
+        provider = 'Please enter a number';
     } else if (check.length !== 11) {
-        result = 'Invalid number';
+        provider = 'Invalid number';
     } else {
         let prefix = check.substring(0, 4);
         if (prefix === '0925') prefix = check.substring(0, 5);
-        result = findProvider(prefix);
+        provider = findProvider(prefix);
     }
 
-    resultDisplay.innerHTML = `${number} → ${result}`;
+    inputDisplay.innerHTML = number;
+    providerDisplay.innerHTML = provider;
     numberField.value = '';
 
     return false;

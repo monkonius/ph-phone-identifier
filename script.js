@@ -75,3 +75,17 @@ document.querySelector('form').onsubmit = () => {
 
     return false;
 }
+
+const button = document.getElementById('submit');
+const result = document.querySelector('.result');
+
+button.addEventListener('click', () => {
+    result.style.animationPlayState = 'running';
+    result.addEventListener('animationend', () => {
+        result.style.animationPlayState = 'paused';
+    })
+
+    result.classList.remove('animate');
+    result.offsetWidth;
+    result.classList.add('animate');
+})

@@ -43,10 +43,34 @@ footer {
 }
 
 .result {
-    height: 24px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 48px;
     margin-bottom: 4px;
+}
+
+.animate {
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+#input {
+    margin-bottom: 0;
 }
 
 #provider {
     display: block;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

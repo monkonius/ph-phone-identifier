@@ -52,7 +52,7 @@ footer {
 
 .animate {
     animation-name: show;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-play-state: paused;
 }

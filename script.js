@@ -51,6 +51,7 @@ const numberField = document.getElementById('number');
 
 document.querySelector('form').onsubmit = () => {
     let number = numberField.value;
+    let valid = false;
     let provider;
 
     const country = /^\+63/;
@@ -67,9 +68,10 @@ document.querySelector('form').onsubmit = () => {
         let prefix = check.substring(0, 4);
         if (prefix === '0925') prefix = check.substring(0, 5);
         provider = findProvider(prefix);
+        valid = true;
     }
 
-    inputDisplay.innerHTML = number;
+    inputDisplay.innerHTML = valid ? '📱 ' + number : '';
     providerDisplay.innerHTML = provider;
     numberField.value = '';
 

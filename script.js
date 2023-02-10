@@ -71,7 +71,7 @@ document.querySelector('form').onsubmit = () => {
         valid = true;
     }
 
-    inputDisplay.innerHTML = valid ? '📱 ' + number : '';
+    inputDisplay.innerHTML = valid ? '&#x1F4F1 ' + number : '';
     providerDisplay.innerHTML = provider;
     numberField.value = '';
 

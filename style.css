@@ -5,7 +5,6 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
-    height: 100dvh;
 }
 
 input {
@@ -39,16 +38,9 @@ p, strong, span {
     font-size: 1.125rem;
 }
 
-.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .content {
     text-align: center;
-    transform: translateY(-50%);
+    margin-top: 3rem;
 }
 
 .result {
@@ -81,5 +73,22 @@ p, strong, span {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        transform: translateY(-50%);
     }
 }

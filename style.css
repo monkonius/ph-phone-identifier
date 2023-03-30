@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Ubuntu';
-    src: url(fonts/Ubuntu-Regular.ttf) format('truetype');
+    font-family: 'NotoSans';
+    src: url(fonts/NotoSans-Regular.ttf) format('truetype');
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'NotoSans', sans-serif;
     min-height: 100vh;
     padding-bottom: 3rem;
 }
